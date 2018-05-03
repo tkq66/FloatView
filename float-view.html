@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="float-view">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `float-view`
+     * Takes in list of json. Present as floating object points that contains pop-over information.
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class FloatView extends Polymer.Element {
+      static get is() { return 'float-view'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'float-view'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(FloatView.is, FloatView);
+  </script>
+</dom-module>

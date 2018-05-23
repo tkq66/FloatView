@@ -1,36 +1,21 @@
-<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="bower_components/polymer/polymer-element.html">
+<script src="bower_components/p5.js/lib/p5.min.js"></script>
 
 <dom-module id="float-view">
   <template>
     <style>
       :host {
         display: block;
+        height: 100%;
+        width: 100%;
+      }
+
+      canvas {
+        visibility: inherit !important;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div id="canvas_container">
+    </div>
   </template>
-
-  <script>
-    /**
-     * `float-view`
-     * Takes in list of json. Present as floating object points that contains pop-over information.
-     *
-     * @customElement
-     * @polymer
-     * @demo demo/index.html
-     */
-    class FloatView extends Polymer.Element {
-      static get is() { return 'float-view'; }
-      static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'float-view'
-          }
-        };
-      }
-    }
-
-    window.customElements.define(FloatView.is, FloatView);
-  </script>
+  <script src="float-view.js" type="module"></script>
 </dom-module>

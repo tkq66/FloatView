@@ -6,25 +6,24 @@
 
     <title>float-view demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
     <link rel="import" href="../float-view.html">
 
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
   </head>
   <body>
+    <style>
+      #ex1{
+        width: 800px;
+        height: 600px;
+      }
+    </style>
     <div class="vertical-section-container centered">
       <h3>Basic float-view demo</h3>
-      <demo-snippet>
-        <template>
-          <float-view></float-view>
-        </template>
-      </demo-snippet>
+        <div id="ex1">
+          <script src="demo1.js" type="module"></script>
+          <float-view id="floatViewTest1"></float-view>
+        </div>
     </div>
   </body>
 </html>
